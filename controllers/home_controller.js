@@ -1,3 +1,6 @@
 module.exports.home = (req, res) => {
-  return res.end("<h1>Express is up for Lazyvibe</h1>");
+  return res.render("home");
+};
+module.exports.user = (req, res) => {
+  return res.end("<h1>user</h1>");
 };

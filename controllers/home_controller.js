@@ -1,6 +1,6 @@
 module.exports.home = (req, res) => {
-  return res.render("home");
+  return res.render("home", { title: "Lazyvibe" });
 };
 module.exports.user = (req, res) => {
-  return res.end("<h1>user</h1>");
+  return res.send("<h1>user</h1>");
 };

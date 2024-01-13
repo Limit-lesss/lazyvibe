@@ -7,5 +7,14 @@
 </head>
 <body>
     <h1>Hello Genius</h1>
+    <ul>
+        <% for(let i of auth){ %>
+            <li>
+                <p><%= i.name %></p>
+                <p><%= i.email %></p>
+                <p><%= i.password %></p>
+            </li>
+            <% } %>
+    </ul>
 </body>
 </html>

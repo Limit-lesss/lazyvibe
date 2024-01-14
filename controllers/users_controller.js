@@ -16,7 +16,7 @@ module.exports.createUser = (req, res) => {
           password: req.body.password,
           name: req.body.name,
         })
-          .then((user) => res.redirect('/users/sign-in'))
+          .then((user) => res.redirect("/users/sign-in"))
           .catch((err) => console.log("error on creating user " + err));
       } else {
         res.render("user_sign_up", {
@@ -33,6 +33,9 @@ module.exports.createUser = (req, res) => {
 };
 //! render sign up page
 module.exports.signUp = (req, res) => {
+  if (req.isAuthenticated()) {
+    return res.redirect("/users/profile");
+  }
   return res.render("user_sign_up", {
     title: "Lazyvibe | Sign Up",
     isPasswordNotMatch: false,
@@ -41,14 +44,19 @@ module.exports.signUp = (req, res) => {
 };
 //! render sign in page
 module.exports.signIn = (req, res) => {
+  if (req.isAuthenticated()) {
+    return res.redirect("/users/profile");
+  }
   return res.render("user_sign_in", { title: "Lazyvibe | Sign In" });
 };
 
 module.exports.profile = (req, res) => {
-  return res.end("<h1>User profile</h1>");
+  return res.render("user_profile");
 };
 module.exports.post = (req, res) => {
   return res.end("<h1>User posts</h1>");
 };
 
-module.exports.createSession = (req, res) => {};
+module.exports.createSession = (req, res) => {
+  return res.redirect("/");
+};

@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
+    <title>
+        <%= title %>
+    </title>
 </head>
+
 <body>
     <h1>Hello Genius</h1>
     <ul>
         <% for(let i of auth){ %>
             <li>
-                <p><%= i.name %></p>
-                <p><%= i.email %></p>
-                <p><%= i.password %></p>
+                <p>
+                    <%= i.name %>
+                </p>
+                <p>
+                    <%= i.email %>
+                </p>
+                <p>
+                    <%= i.password %>
+                </p>
             </li>
             <% } %>
     </ul>
 </body>
+
 </html>

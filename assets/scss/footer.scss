@@ -1,0 +1,16 @@
+footer{
+    background-color: gray;
+    color: white;
+    display: flex;
+    padding: 20px;
+    h2{
+        margin-right: 30px;
+    }
+    li{
+        list-style: none;
+        font-size: 20px;
+    }
+    a{
+        color: white;
+    }
+}

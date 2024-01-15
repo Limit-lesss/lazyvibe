@@ -1,0 +1,27 @@
+<header>
+    <h1 ><a href="/" id="header-name">Lazyvibe</a></h1>
+    <ul>
+        <% if (locals.user){ %>
+            <li id="user-name">
+                <a href="/users/profile">
+                    <%= user.name %>
+                </a>
+            </li>
+            <li id="sign-out">
+                <a href="/users/sign-out">Sign Out</a>
+            </li>
+        <% }else{ %>
+
+            <li id="sign-in">
+                <a href="/users/sign-in">Sign In</a>
+            </li>
+
+            <li id="sign-up">
+                <a href="/users/sign-up">Sign Up</a>
+            </li>
+
+
+        <% } %>
+    </ul>
+
+</header>

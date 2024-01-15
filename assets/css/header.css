@@ -1,0 +1,40 @@
+header {
+  box-shadow: rgba(140, 140, 140, 0.35) 0px 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header #header-name {
+  color: #5f90a4;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header h1 {
+  font-size: 30px;
+}
+
+header ul {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  font-size: 20px;
+}
+
+header ul #sign-out, header ul #sign-in, header ul #sign-up {
+  border: 1px solid #2f332f;
+  padding: 10px;
+  margin-right: 5px;
+  background-color: white;
+}
+
+header ul #user-name {
+  padding: 10px;
+  margin-right: 10px;
+}

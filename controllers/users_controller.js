@@ -51,7 +51,9 @@ module.exports.signIn = (req, res) => {
 };
 
 module.exports.profile = (req, res) => {
-  return res.render("user_profile");
+  return res.render("user_profile", {
+    title: "User Profile",
+  });
 };
 module.exports.post = (req, res) => {
   return res.end("<h1>User posts</h1>");
@@ -59,4 +61,11 @@ module.exports.post = (req, res) => {
 
 module.exports.createSession = (req, res) => {
   return res.redirect("/");
+};
+
+module.exports.destroySession = (req, res, next) => {
+  req.logout((err) => {
+    if (err) return next(err);
+    return res.redirect("/");
+  });
 };
